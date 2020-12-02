@@ -7,7 +7,7 @@ def checkRow(row: str, alternative=False) -> bool:
     amount, char = rule.split(' ')
     minimum, maximum = map(int, amount.split('-'))
     if alternative:
-        return (password[minimum - 1] == char) ^ (password[maximum - 1] != char)
+        return (password[minimum - 1] == char) ^ (password[maximum - 1] == char)
     else:
         occurrences = password.count(char)
         return minimum <= occurrences <= maximum
