@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict
 from os.path import join, dirname
 from functools import reduce
 

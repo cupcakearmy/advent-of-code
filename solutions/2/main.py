@@ -1,4 +1,3 @@
-from typing import List
 from os.path import join, dirname
 
 
