@@ -3,7 +3,7 @@ from itertools import product
 from os.path import join, dirname
 
 target = 2020
-data = join(dirname(__file__), 'data.txt')
+data = join(dirname(__file__), '../data.txt')
 with open(data) as f:
     numbers: List[int] = list(map(int, f.readlines()))
     for a, b in product(numbers, numbers):

@@ -12,7 +12,7 @@ def checkRow(row: str, alternative=False) -> bool:
         return minimum <= occurrences <= maximum
 
 
-data = join(dirname(__file__), 'data.txt')
+data = join(dirname(__file__), '../data.txt')
 with open(data) as f:
     valid = 0
     valid_alt = 0
