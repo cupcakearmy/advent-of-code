@@ -19,7 +19,7 @@ class Forest():
         return row[x % len(row)] == '#'
 
 
-data = join(dirname(__file__), 'data.txt')
+data = join(dirname(__file__), '../data.txt')
 with open(data) as f:
     forest = Forest(f.read())
 
