@@ -40,7 +40,7 @@ def validate_chunk(chunk, extended=False):
     return True
 
 
-data = join(dirname(__file__), 'data.txt')
+data = join(dirname(__file__), '../data.txt')
 with open(data) as f:
     chunks = re.split('\n\n+', f.read().strip())
     total_simple = 0
