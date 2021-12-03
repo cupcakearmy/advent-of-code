@@ -5,7 +5,7 @@ to: <%= year %>/<%= day %>/python/main.py
 
 from os.path import join, dirname
 
-# Day 01
+# Day <%= day %>
 
 # Common
 
@@ -13,7 +13,7 @@ from os.path import join, dirname
 def read_input(filename):
     data = join(dirname(__file__), '..', filename)
     with open(data) as f:
-        return f.read()
+        return f.read().strip()
 
 # 1
 
