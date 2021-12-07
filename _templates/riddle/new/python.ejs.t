@@ -16,5 +16,7 @@ def read_input(filename):
         return f.read().strip()
 
 # 1
+print('1.')
 
 # 2
+print('\n2.')
