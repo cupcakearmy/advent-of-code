@@ -15,6 +15,10 @@ def read_input(filename):
     with open(data) as f:
         return f.read().strip()
 
+
+test = read_input('test.txt')
+data = read_input('input.txt')
+
 # 1
 print('1.')
 
