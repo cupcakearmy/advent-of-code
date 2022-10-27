@@ -9,11 +9,6 @@ from os.path import dirname, join
 # Common
 
 
-def log(str):
-    if False:
-        print(str)
-
-
 def read_input(filename):
     data = join(dirname(__file__), '..', filename)
     with open(data) as f:
@@ -70,7 +65,6 @@ class NavigationSubsystemLineParser():
         """
         Returns -1 for incomplete, 0 for valid, or the position of the first invalid character
         """
-        log(f'Validating {self.line}')
         while self.position < len(self.line):
             expected = self._allowed_chars()
             char = self.line[self.position]
@@ -80,7 +74,6 @@ class NavigationSubsystemLineParser():
             else:
                 expected = self.pairs[self.stack[-1]]
                 if char != expected:
-                    log(f'Invalid char {char} at position {self.position}. Expected {expected}')
                     return ParseResult(ResultType.Corrupted, expected=expected, found=char)
                 else:
                     self.stack.pop()
@@ -100,8 +93,6 @@ class NavigationSubsystem():
 
     def count_corrupted(self) -> int:
         results = self.validate()
-        for result in results:
-            log(result)
         points_map = {
             ')': 3,
             ']': 57,
@@ -134,7 +125,6 @@ class NavigationSubsystem():
             if result.type == ResultType.Incomplete
         ]
         points.sort()
-        log(points)
         return points[len(points)//2]
 
     @staticmethod

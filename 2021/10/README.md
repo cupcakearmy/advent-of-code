@@ -8,7 +8,7 @@ A neat trick for part 2 is to simply reverse the order of the stack and count th
 <details>
   <summary>Solutions</summary>
   <ol>
-    <li>392097</li>
+    <li>288957</li>
     <li>4263222782</li>
   </ol>
 </details>
