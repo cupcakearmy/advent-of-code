@@ -19,8 +19,4 @@ def read_input(filename):
 test = read_input('test.txt')
 data = read_input('input.txt')
 
-# 1
-print('1.')
-
-# 2
-print('\n2.')
+# Running
