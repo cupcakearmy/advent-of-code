@@ -1,5 +1,4 @@
 .venv
-.vscode
 node_modules
-
 *.txt
+.env*
