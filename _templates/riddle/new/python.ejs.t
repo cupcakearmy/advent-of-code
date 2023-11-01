@@ -1,5 +1,6 @@
 ---
 to: <%= year %>/<%= day %>/python/main.py
+unless_exists: true
 ---
 #!/usr/bin/env python
 

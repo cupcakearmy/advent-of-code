@@ -1,5 +1,6 @@
 ---
 to: <%= year %>/<%= day %>/README.md
+unless_exists: true
 ---
 
 # <%= day %>
