@@ -12,6 +12,13 @@ async function getInput(year, day) {
 
 module.exports = {
   params: async ({ args }) => {
-    return { ...args, input: await getInput(args.year, args.day) }
+    const day = args.day.toString().padStart(2, '0') // Padded
+    return {
+      ...args,
+      id: `${args.year}-${day}`,
+      dir: `./${args.year}/${day}`,
+      input: await getInput(args.year, parseInt(day)),
+      day,
+    }
   },
 }

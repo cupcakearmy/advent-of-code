@@ -1,5 +1,5 @@
 ---
-to: <%= year %>/<%= day %>/README.md
+to: <%= dir %>/README.md
 unless_exists: true
 ---
 

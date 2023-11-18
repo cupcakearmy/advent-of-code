@@ -1,4 +1,4 @@
 ---
-to: <%= year %>/<%= day %>/test.txt
+to: <%= dir %>/test.txt
 unless_exists: true
 ---

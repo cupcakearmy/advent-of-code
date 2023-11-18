@@ -1,5 +1,5 @@
 ---
-to: <%= year %>/<%= day %>/input.txt
+to: <%= dir %>/input.txt
 unless_exists: true
 ---
 <%= input %>

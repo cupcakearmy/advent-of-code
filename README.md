@@ -2,4 +2,4 @@
 
 > New days are generated with [`hygen`](https://github.com/jondot/hygen).
 >
-> `hygen riddle new --year 2021 --day 01`
+> `bun run gen --year 2022 --day 1`
