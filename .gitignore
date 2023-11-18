@@ -2,3 +2,7 @@
 node_modules
 *.txt
 .env*
+
+
+# Added by cargo
+/target
