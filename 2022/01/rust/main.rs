@@ -29,14 +29,14 @@ fn part_a() {
 }
 
 fn part_b() {
-    let mut result: Vec<u32> = include_str!("../input.txt")
+    let mut result = include_str!("../input.txt")
         .trim()
         .split("\n\n")
         .map(|x| x.lines().map(|x| x.parse::<u32>().unwrap()).sum::<u32>())
-        .collect();
-    result.sort();
-    let total = &result.as_slice()[result.len() - 3..result.len()];
-    println!("B: {:?}", total.iter().sum::<u32>());
+        .collect::<Vec<u32>>();
+    result.sort_unstable();
+    let total = result.into_iter().rev().take(3).sum::<u32>();
+    println!("B: {}", total);
 }
 
 fn main() {
