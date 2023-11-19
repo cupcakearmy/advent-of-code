@@ -13,26 +13,34 @@ mod tests {
 
     #[bench]
     fn bench_a(b: &mut Bencher) {
-        b.iter(|| part_a());
+        b.iter(|| part_a(INPUT));
     }
 
     #[bench]
     fn bench_b(b: &mut Bencher) {
-        b.iter(|| part_b());
+        b.iter(|| part_b(INPUT));
     }
 }
 
-fn part_a() {
-    let result = include_str!("../input.txt");
-    println!("A: {}", result);
+const INPUT: &str = include_str!("../input.txt");
+const TEST: &str = include_str!("../test.txt");
+
+fn part_a(input: &str) {
+    let result = input.trim();
+    println!("{}", result);
 }
 
-fn part_b() {
-    let result = include_str!("../input.txt");
-    println!("A: {}", result);
+fn part_b(input: &str) {
+    let result = input.trim();
+    println!("{}", result);
 }
 
 fn main() {
-    part_a();
-    part_b();
+    println!("Part A:");
+    part_a(TEST);
+    // part_a(INPUT);
+
+    println!("\nPart B:");
+    part_b(TEST);
+    // part_b(INPUT);
 }
