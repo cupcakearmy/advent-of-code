@@ -9,37 +9,45 @@ mod tests {
 
     #[bench]
     fn bench_a(b: &mut Bencher) {
-        b.iter(|| part_a());
+        b.iter(|| part_a(INPUT));
     }
 
     #[bench]
     fn bench_b(b: &mut Bencher) {
-        b.iter(|| part_b());
+        b.iter(|| part_b(INPUT));
     }
 }
 
-fn part_a() {
-    let result: u32 = include_str!("../input.txt")
+const INPUT: &str = include_str!("../input.txt");
+const TEST: &str = include_str!("../test.txt");
+
+fn part_a(input: &str) {
+    let result: u32 = input
         .trim()
         .split("\n\n")
         .map(|x| x.lines().map(|x| x.parse::<u32>().unwrap()).sum())
         .max()
         .unwrap();
-    println!("A: {}", result);
+    println!("{}", result);
 }
 
-fn part_b() {
-    let mut result = include_str!("../input.txt")
+fn part_b(input: &str) {
+    let mut result = input
         .trim()
         .split("\n\n")
         .map(|x| x.lines().map(|x| x.parse::<u32>().unwrap()).sum::<u32>())
         .collect::<Vec<u32>>();
     result.sort_unstable();
     let total = result.into_iter().rev().take(3).sum::<u32>();
-    println!("B: {}", total);
+    println!("{}", total);
 }
 
 fn main() {
-    part_a();
-    part_b();
+    println!("Part A:");
+    part_a(TEST);
+    part_a(INPUT);
+
+    println!("\nPart B:");
+    part_b(TEST);
+    part_b(INPUT);
 }
