@@ -10,4 +10,8 @@ edition = "2021"
 name = "2022-01"
 path = "./2022/01/rust/main.rs"
 
+[[bin]]
+name = "2022-02"
+path = "./2022/02/rust/main.rs"
+
 # INJECT HERE
