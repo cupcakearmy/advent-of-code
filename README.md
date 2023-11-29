@@ -16,11 +16,17 @@ New "days" are generated with [`hygen`](https://github.com/jondot/hygen). This w
 # First time setup
 bun i
 
-# Put the Advent of Code token into .env
+# Put the Advent of Code token into .env (details below)
 
 # Generate day
 bun run gen --year 2022 --day 1
 ```
+
+> Extracting the Advent of Code cookie
+>
+> 1. Navigate to https://adventofcode.com/ and login.
+> 2. Open dev tools and copy the cookie named `session`.
+> 3. save `TOKEN=<my-token>` to `.env`.
 
 ## Languages
 
