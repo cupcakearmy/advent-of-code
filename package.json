@@ -1,9 +1,14 @@
 {
+  "name": "advent-of-code",
+  "type": "module",
   "scripts": {
     "gen": "bun hygen riddle new"
   },
   "dependencies": {
+    "@tsconfig/strictest": "^2.0.2",
     "axios": "^1.6.0",
-    "hygen": "^6.2.11"
+    "bun-types": "latest",
+    "hygen": "^6.2.11",
+    "typescript": "^5.0.0"
   }
 }

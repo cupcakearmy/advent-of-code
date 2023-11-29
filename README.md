@@ -1,5 +1,13 @@
 # Advent Of Code
 
+Template repository for Advent of Code. It automatically downloads your puzzle inputs and bootstraps files for the following languages:
+
+- Typescript
+- Python
+- Rust
+
+Have fun! 🤗🎄
+
 ## Getting started
 
 New "days" are generated with [`hygen`](https://github.com/jondot/hygen). This will bootstrap code for python and rust. See details about the specifica languages below
@@ -8,27 +16,60 @@ New "days" are generated with [`hygen`](https://github.com/jondot/hygen). This w
 # First time setup
 bun i
 
-# Generate
+# Put the Advent of Code token into .env
+
+# Generate day
 bun run gen --year 2022 --day 1
 ```
 
-## Python
+## Languages
 
-## Rust
+Below are instructions for the specific handling of each language included.
+
+### Typescript
 
 Run a single day:
 
 ```bash
-cargo run --bin 2022-01
+# Once
+bun run 2022/01/typescript/main.ts
+
+# Rerun on change
+bun run --watch 2022/01/typescript/main.ts
 ```
 
-Bench a day:
+### Python
+
+```bash
+# Get a python enabled shell, with the latest version
+poetry shell
+
+# Run once
+python 2022/01/python/main.py
+
+# Rerun on change
+bunx nodemon 2022/01/python/main.py
+```
+
+### Rust
+
+Run a single day:
+
+```bash
+# Once
+cargo run --bin 2022-01
+
+# Rerun on change (requires: https://github.com/watchexec/cargo-watch)
+cargo watch -x 'run --bin 2022-01'
+```
+
+Benchmark a day:
 
 ```bash
 cargo bench --bin 2022-01
 ```
 
-Bench all days:
+Benchmark all days:
 
 ```bash
 cargo bench

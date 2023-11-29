@@ -1,0 +1,12 @@
+{
+  "extends": ["@tsconfig/strictest"],
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "noEmit": true,
+    "types": ["bun-types"]
+  }
+}
