@@ -6,8 +6,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 // SETUP
-const INPUT = fs.readFileSync(path.join(__dirname, '../input.txt'), 'utf-8').trim()
-const TEST = fs.readFileSync(path.join(__dirname, '../test.txt'), 'utf-8').trim()
+const INPUT = fs.readFileSync(path.join(import.meta.dir, '../input.txt'), 'utf-8').trim()
+const TEST = fs.readFileSync(path.join(import.meta.dir, '../test.txt'), 'utf-8').trim()
 
 // TASK
 
