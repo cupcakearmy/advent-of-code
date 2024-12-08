@@ -63,7 +63,6 @@ class Map:
         for y, line in enumerate(raw.splitlines()):
             for x, f in enumerate(line):
                 if f == "^":
-                    print(f"FOUND! {x} {y}")
                     position = (y, x)
         return Map(fields, position, direction)
 
