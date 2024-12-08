@@ -5,16 +5,16 @@ extern crate test;
 #[cfg(test)]
 mod tests {
     use super::*;
-    use test::Bencher;
+    use test::{black_box, Bencher};
 
     #[bench]
     fn bench_a(b: &mut Bencher) {
-        b.iter(|| part_a(INPUT));
+        b.iter(|| black_box(part_a(INPUT)));
     }
 
     #[bench]
     fn bench_b(b: &mut Bencher) {
-        b.iter(|| part_b(INPUT));
+        b.iter(|| black_box(part_b(INPUT)));
     }
 }
 

@@ -14,4 +14,24 @@ path = "./2022/01/rust/main.rs"
 name = "2022-02"
 path = "./2022/02/rust/main.rs"
 
+[[bin]]
+name = "2022-03"
+path = "./2022/03/rust/main.rs"
+
+[[bin]]
+name = "2023-01"
+path = "./2023/01/rust/main.rs"
+
+[[bin]]
+name = "2023-02"
+path = "./2023/02/rust/main.rs"
+
+[[bin]]
+name = "2023-03"
+path = "./2023/03/rust/main.rs"
+
+[[bin]]
+name = "2023-04"
+path = "./2023/04/rust/main.rs"
+
 # INJECT HERE
