@@ -1,19 +1,7 @@
-[tool.poetry]
-name = "advent-of-code"
+[project]
+name = "aoc"
 version = "0.1.0"
-description = ""
-authors = ["cupcakearmy <hi@nicco.io>"]
+description = "Add your description here"
 readme = "README.md"
-packages = [{include = "advent_of_code"}]
-
-[tool.poetry.dependencies]
-python = "^3.12"
-
-
-[tool.poetry.group.dev.dependencies]
-mypy = "^1.6.1"
-autopep8 = "^2.0.4"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.12"
+dependencies = ["matplotlib>=3.9.3", "networkx[default]>=3.4.2"]
